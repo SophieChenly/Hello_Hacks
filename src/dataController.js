@@ -5,7 +5,7 @@ let people = data;
  
 
 
-
+// Gives item to player and deletes item from shop
 export function buyItem(input,userName) {
   const index = people.findIndex((person) => {
     return person.name === userName;
@@ -55,6 +55,7 @@ export function readPeople(input) {
   return result;
 }
 
+// Gives players a new headgear
 export function updateHeadgear(input,userNameField) {
   const index = people.findIndex((person) => {
     return person.name === userNameField;
@@ -72,6 +73,7 @@ export function updateHeadgear(input,userNameField) {
   return people;
 }
 
+// Updates the scores of player's profile according to score gained
 export function changeScores(score,user)  {
   const index = people.findIndex((person) => {
     return person.name === user;

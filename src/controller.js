@@ -14,6 +14,8 @@ var user
 export function setUserName(userValue)  {
     user = userValue
 }
+
+// This generates questions for the player to solve in intervals of 3 seconds
 export function generateQuestions(showQuestion,winner,scoreGain,playerHealth,botHealth) {
     var timeRun = 0
     var interval = setInterval(multiplication,3000) 
@@ -41,6 +43,7 @@ export function generateQuestions(showQuestion,winner,scoreGain,playerHealth,bot
 
 }
 
+// Checking whether the input is correct and making changes to the health bars accordingly
 export function checkCorrect(answer,showRightWrong,botHealth,playerHealth)    {
     if (Number(answer) === correctAnswer)   {
         showRightWrong.textContent = "Correct"
@@ -55,6 +58,7 @@ export function checkCorrect(answer,showRightWrong,botHealth,playerHealth)    {
 
 }
 
+// Determining the winner of the game by comparing health bars
 function determineWinner(winner,scoreGain,playerHealth,botHealth)    {
     if (pHP > bHP)  {
         winner.textContent = "Player Wins!"

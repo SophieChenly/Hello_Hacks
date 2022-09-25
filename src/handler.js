@@ -12,7 +12,7 @@ import {
   setUserName,
 } from "./controller.js"
 
-
+// Fields for forms, buttons, text inputs
 const showResult = document.getElementById("result")
 const showQuestion = document.getElementById("mathProblem")
 const showRightWrong = document.getElementById("showRightWrong")
@@ -23,14 +23,12 @@ const scoreGain = document.getElementById("scoreGain")
 const answer = document.getElementById("answer")
 const userNameButton = document.getElementById("userNameButton")
 const userNameField = document.getElementById("userName")
-
 const createPeopleForm = document.getElementById("createPeopleForm")
 const showScores = document.getElementById("showScores")
 const deletePeopleForm = document.getElementById("deletePeopleForm")
 const button = document.getElementById("button")
 const enterAnswer = document.getElementById("enterAnswer")
 const chooseSomething = document.getElementById("chooseSomething")
-
 const displayButton = document.getElementById("display")
 const getItem = document.getElementById("buyItem")
 
