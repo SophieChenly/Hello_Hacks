@@ -12,7 +12,7 @@ var user
 export function setUserName(userValue)  {
     user = userValue
 }
-export function generateQuestions(showQuestion,winner,scoreGain) {
+export function generateQuestions(showQuestion,winner,scoreGain,playerHealth,botHealth) {
     var timeRun = 0
     var interval = setInterval(multiplication,3000) 
         
@@ -20,10 +20,10 @@ export function generateQuestions(showQuestion,winner,scoreGain) {
     function multiplication()  {
         let max = 13
         let min = 1
-        timeRun++
+        timeRun++   
 
         if (timeRun === setTime){
-            determineWinner(winner,scoreGain) 
+            determineWinner(winner,scoreGain,playerHealth,botHealth) 
             clearInterval(interval)  
         }
         
@@ -53,7 +53,7 @@ export function checkCorrect(answer,showRightWrong,botHealth,playerHealth)    {
 
 }
 
-function determineWinner(winner,scoreGain)    {
+function determineWinner(winner,scoreGain,playerHealth,botHealth)    {
     if (pHP > bHP)  {
         winner.textContent = "Player Wins!"
         scoreGain.textContent = score
@@ -62,6 +62,8 @@ function determineWinner(winner,scoreGain)    {
         winner.textContent = "Bot Wins! HAHA"
     else if (bHP === pHP)
         winner.textContent = "TIE!"
-
+    
+    playerHealth.textContent = 100
+    botHealth.textContent = 100
     changeScores(score,user)
 }

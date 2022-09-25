@@ -1,7 +1,8 @@
 import {
   createPeople,
   readPeople,
-  deletePeople
+  deletePeople,
+  updateHeadgear,
 } from "./dataController.js"
 import {
   checkCorrect,
@@ -25,6 +26,15 @@ const showScores = document.getElementById("showScores")
 const deletePeopleForm = document.getElementById("deletePeopleForm")
 const button = document.getElementById("button")
 const enterAnswer = document.getElementById("enterAnswer")
+const chooseSomething = document.getElementById("chooseSomething")
+
+chooseSomething.addEventListener("submit",function (event)  {
+  event.preventDefault()
+  const formData = new FormData(event.target);
+  const formProps = Object.fromEntries(formData);
+  const result = updateHeadgear(formProps,userNameField.value);
+  showResult.innerHTML = JSON.stringify(result, null, 2);
+})
 
 createPeopleForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -50,10 +60,12 @@ deletePeopleForm.addEventListener("submit", function (event) {
   showResult.innerHTML = JSON.stringify(result, null, 2);
 })
 
+
+
 button.addEventListener("click",function (event){
   event.preventDefault();
 
-  generateQuestions(showQuestion,winner,scoreGain)
+  generateQuestions(showQuestion,winner,scoreGain,playerHealth,botHealth)
 
 
 })

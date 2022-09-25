@@ -10,8 +10,8 @@ export function createPeople(input) {
   }
   const newPerson = {
     name: input.name,
-    
-    score: 0
+    score: 0,
+    headgear: "None"
   };
   people.push(newPerson);
   return people;
@@ -32,23 +32,18 @@ export function readPeople(input) {
   return result;
 }
 
-export function updatePeople(input) {
+export function updateHeadgear(input,userNameField) {
   const index = people.findIndex((person) => {
-    return person.name === input.name;
+    return person.name === userNameField;
   });
   if (index === -1) {
     return people;
   }
   const person = people[index];
 
-  person.subscribed = Boolean(input.subscribed);
-  if (input.interests) {
-    const interestsArray = input.interests.split(",");
-    person.interests = person.interests.concat(interestsArray);
-  }
-  if (input.age) {
-    person.demographics.age = Number(input.age);
-  }
+  if(input.name)
+    person.headgear = input.name
+
 
   people[index] = person;
   return people;
