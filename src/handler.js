@@ -3,12 +3,15 @@ import {
   readPeople,
   deletePeople,
   updateHeadgear,
+  showShop,
+  buyItem,
 } from "./dataController.js"
 import {
   checkCorrect,
   generateQuestions,
   setUserName,
 } from "./controller.js"
+
 
 const showResult = document.getElementById("result")
 const showQuestion = document.getElementById("mathProblem")
@@ -27,6 +30,24 @@ const deletePeopleForm = document.getElementById("deletePeopleForm")
 const button = document.getElementById("button")
 const enterAnswer = document.getElementById("enterAnswer")
 const chooseSomething = document.getElementById("chooseSomething")
+
+const displayButton = document.getElementById("display")
+const getItem = document.getElementById("buyItem")
+
+getItem.addEventListener("submit",function(event) {
+  event.preventDefault()
+  const formData = new FormData(event.target);
+  const formProps = Object.fromEntries(formData);
+  const result = buyItem(formProps,userNameField.value);
+  showResult.innerHTML = JSON.stringify(result, null, 2);
+})
+
+displayButton.addEventListener("click",function(event)  {
+  event.preventDefault()
+  const result = showShop()
+  showResult.innerHTML = JSON.stringify(result,null,2)
+
+})
 
 chooseSomething.addEventListener("submit",function (event)  {
   event.preventDefault()
@@ -60,14 +81,10 @@ deletePeopleForm.addEventListener("submit", function (event) {
   showResult.innerHTML = JSON.stringify(result, null, 2);
 })
 
-
-
 button.addEventListener("click",function (event){
   event.preventDefault();
 
   generateQuestions(showQuestion,winner,scoreGain,playerHealth,botHealth)
-
-
 })
 
 enterAnswer.addEventListener("click", function(event) {

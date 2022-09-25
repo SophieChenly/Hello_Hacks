@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Hacks Backend</title>
+    <title>Super Math Pros Backend</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
     <script src="src/handler.js" type="module"></script>
-    <h1>Backend Demo</h1>
+    <h1>Super Math Pros</h1>
     <h2>Register</h2>
     <form id="createPeopleForm">
       Username: <input type="text" name="name" /><br />
@@ -41,22 +41,32 @@
     <h4>Score Gained</h4>
     <pre id="scoreGain">0</pre> 
 
-    <h2>Display Stats</h2>
+    <h2>Display Your Profile</h2>
     <form id="showScores">
       Username: <input type="text" name="name" /><br />
       <input type="submit" value="Enter" />
     </form>
-    <h2>Choose a headgear</h2>
+    <h2>Select headgear</h2>
     <form id="chooseSomething">
       Headgear:  <input type="text" name="name"/><br/>
       <input type="submit" value="Enter"/>
     </form>
+
+    <h2>Prize Shop</h2>
+    <button id="display">Display Shop</button>
+    <h2></h2>
+
+    <form id="buyItem">
+      Enter the item of choice: <input type="text" name="name"/><br/>
+      <input type="submit" value="Buy" />
+    </form>
+    
     <h2>Delete your account</h2>
     <form id="deletePeopleForm">
       Username: <input type="text" name="name" /><br /><br />
       <input type="submit" value="Delete" />
     </form>
-    <h2>Scores</h2>
+    <h2>Player Profiles</h2>
     <pre id="result"></pre>
   </body>
 </html>

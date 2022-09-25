@@ -1,5 +1,31 @@
 import data from "./peopleData.json" assert {type: 'json'};
+import shop from "./prizeShop.json" assert {type: 'json'};
+let itemShop = shop
 let people = data;
+ 
+
+
+
+export function buyItem(input,userName) {
+  const index = people.findIndex((person) => {
+    return person.name === userName;
+  });
+  if (index === -1) {
+    return people;
+  }
+  const person = people[index];
+
+  if(Object.values(itemShop).includes(input.name)) {
+    person.other = person.other + ", " + input.name
+    itemShop.splice(itemShop.indexOf(input.name),1)
+  }
+
+   return itemShop
+}
+
+export function showShop()  {
+  return itemShop
+}
 
 export function createPeople(input) {
   const idExists = people.find((person) => {
@@ -11,7 +37,8 @@ export function createPeople(input) {
   const newPerson = {
     name: input.name,
     score: 0,
-    headgear: "None"
+    headgear: "None",
+    other: "Infinity Gauntlet"
   };
   people.push(newPerson);
   return people;
@@ -24,11 +51,7 @@ export function readPeople(input) {
       return person.name === input.name;
     });
   }
-  if (input.country) {
-    result = result.filter((person) => {
-      return person.demographics.country === input.country;
-    });
-  }
+  
   return result;
 }
 

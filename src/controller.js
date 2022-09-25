@@ -9,6 +9,8 @@ var bHP = 100
 var score = 500
 var user
 
+
+
 export function setUserName(userValue)  {
     user = userValue
 }
