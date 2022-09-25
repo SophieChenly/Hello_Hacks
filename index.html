@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Hacks Backend Demo</title>
+    <title>Hello Hacks Backend</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
-    <script src="src/handler.js"></script>
+    <script src="src/handler.js" type="module"></script>
     <h1>Backend Demo</h1>
-    <h2>Math Problem</h2>
-    
-   <div id="problem">Hello</div> 
+    <h2>Register</h2>
     <form id="createPeopleForm">
-      answer: <input type="text" name="name" /><br />
+      Username: <input type="text" name="name" /><br />
+      <input type="submit" value="Create" /><br />
+    </form>
+    <h2>Game</h2>
+
+    <button id ="button">Start Game</button>
+
+
+    <h5>Math Question</h5>
+  
     
-      <input type="submit" value="submit" /><br />
+    <pre id="mathProblem">question</pre>
+    Answer: <input type="text" id="answer" name="answer" /><br />
+    <button id="enterAnswer">Enter</button>
+    
+    <pre id="showRightWrong"></pre>
+
+    <h4>Your Health: </h4>
+    <pre id="playerHealth">100</pre>
+
+    <h4>Bot Health: </h4>
+    <pre id="botHealth">100</pre>
+
+    <h4>Winner:</h4>
+    <pre id="winner">Nobody</pre>
+
+    <h4>Score Gained</h4>
+    <pre id="scoreGain">0</pre> 
+
+    <h2>Show Score</h2>
+    <form id="showScores">
+      Username: <input type="text" name="name" /><br />
+      <input type="submit" value="Enter" />
     </form>
-    <h2>Read</h2>
-    <form id="readPeopleForm">
-      name: <input type="text" name="name" /><br />
-      subscribed?: <input type="checkbox" name="subscribed" /><br />
-      country: <input type="text" name="country" /><br /><br />
-      <input type="submit" value="Read" />
-    </form>
-    <h2>Update</h2>
-    <form id="updatePeopleForm">
-      name: <input type="text" name="name" /><br />
-      subscribed?: <input type="checkbox" name="subscribed" /><br />
-      interests:
-      <input
-        type="text"
-        name="interests"
-        placeholder="separate each by comma"
-      /><br />
-      age: <input type="text" name="age" /><br /><br />
-      <input type="submit" value="Update" />
-    </form>
-    <h2>Delete</h2>
+    <h2>Delete your account</h2>
     <form id="deletePeopleForm">
-      name: <input type="text" name="name" /><br /><br />
+      Username: <input type="text" name="name" /><br /><br />
       <input type="submit" value="Delete" />
     </form>
-    <h2>Result</h2>
+    <h2>Scores</h2>
     <pre id="result"></pre>
   </body>
 </html>
