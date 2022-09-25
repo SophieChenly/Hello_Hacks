@@ -6,6 +6,7 @@ import {
 import {
   checkCorrect,
   generateQuestions,
+  setUserName,
 } from "./controller.js"
 
 const showResult = document.getElementById("result")
@@ -16,6 +17,8 @@ const botHealth = document.getElementById("botHealth")
 const winner = document.getElementById("winner")
 const scoreGain = document.getElementById("scoreGain")
 const answer = document.getElementById("answer")
+const userNameButton = document.getElementById("userNameButton")
+const userNameField = document.getElementById("userName")
 
 const createPeopleForm = document.getElementById("createPeopleForm")
 const showScores = document.getElementById("showScores")
@@ -50,7 +53,7 @@ deletePeopleForm.addEventListener("submit", function (event) {
 button.addEventListener("click",function (event){
   event.preventDefault();
 
-  generateQuestions(showQuestion,winner,botHealth,playerHealth)
+  generateQuestions(showQuestion,winner,scoreGain)
 
 
 })
@@ -62,4 +65,8 @@ enterAnswer.addEventListener("click", function(event) {
  
 })
 
+userNameButton.addEventListener("click",function(event){
+  event.preventDefault();
 
+  setUserName(userNameField.value)
+})

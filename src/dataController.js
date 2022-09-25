@@ -54,6 +54,18 @@ export function updatePeople(input) {
   return people;
 }
 
+export function changeScores(score,user)  {
+  const index = people.findIndex((person) => {
+    return person.name === user;
+  });
+
+  const person = people[index];
+
+  person.score += score
+  
+}
+
+
 export function deletePeople(input) {
   people = people.filter((person) => {
     return person.name !== input.name;

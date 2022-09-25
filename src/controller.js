@@ -1,9 +1,18 @@
+import  {
+    changeScores,
+} from "./dataController.js"
+
 var correctAnswer = 0
 var setTime = 3
 var pHP = 100
 var bHP = 100
+var score = 500
+var user
 
-export function generateQuestions(showQuestion,winner,botHealth,playerHealth) {
+export function setUserName(userValue)  {
+    user = userValue
+}
+export function generateQuestions(showQuestion,winner,scoreGain) {
     var timeRun = 0
     var interval = setInterval(multiplication,3000) 
         
@@ -14,7 +23,7 @@ export function generateQuestions(showQuestion,winner,botHealth,playerHealth) {
         timeRun++
 
         if (timeRun === setTime){
-            determineWinner(winner,botHealth,playerHealth) 
+            determineWinner(winner,scoreGain) 
             clearInterval(interval)  
         }
         
@@ -44,12 +53,15 @@ export function checkCorrect(answer,showRightWrong,botHealth,playerHealth)    {
 
 }
 
-function determineWinner(winner)    {
-    if (pHP > bHP)
+function determineWinner(winner,scoreGain)    {
+    if (pHP > bHP)  {
         winner.textContent = "Player Wins!"
+        scoreGain.textContent = score
+    }
     else if (bHP < pHP)
         winner.textContent = "Bot Wins! HAHA"
     else if (bHP === pHP)
         winner.textContent = "TIE!"
 
+    changeScores(score,user)
 }
