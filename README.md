@@ -2,6 +2,17 @@
 
 This is a functional prototpye of our EdTech solution's backend system for the hackathon Hello Hacks hosted by UBC Biztech. 
 
+FRONTEND:
+
+https://www.figma.com/file/gF3i5JopvuUu6IgVzAKJki/Flowchart?node-id=5%3A2
+
+Snippets of our product
+
+
+
+
+BACKEND CODE:
+
 Please test this using the live server extension in VScode.
 
 MUST READ:
