@@ -6,7 +6,7 @@ Members:
 Sophie Chen - @SophieChenly
 Ray Ho - @Raywnh
 Calvin Cavanagh - @calcav28
-Donna Li - 
+Donna Li - @Dlii_01
 
 FRONTEND:
 
