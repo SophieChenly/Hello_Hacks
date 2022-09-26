@@ -2,6 +2,12 @@
 
 This is a functional prototpye of our EdTech solution for the hackathon HelloHacks hosted by UBC Biztech. 
 
+Members:
+Sophie Chen - @SophieChenly
+Ray Ho - @Raywnh
+Calvin Cavanagh - @calcav28
+Donna Li - 
+
 FRONTEND:
 
 https://www.figma.com/file/gF3i5JopvuUu6IgVzAKJki/Flowchart?node-id=5%3A2
