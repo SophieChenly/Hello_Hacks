@@ -1,6 +1,6 @@
-# Super Math Pros
+# Super Math Pros - 1st Place Winner @ UBC Biztech HelloHacks
 
-This is a functional prototpye of our EdTech solution's backend system for the hackathon Hello Hacks hosted by UBC Biztech. 
+This is a functional prototpye of our EdTech solution for the hackathon HelloHacks hosted by UBC Biztech. 
 
 FRONTEND:
 
