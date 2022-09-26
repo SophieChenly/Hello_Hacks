@@ -8,8 +8,8 @@ https://www.figma.com/file/gF3i5JopvuUu6IgVzAKJki/Flowchart?node-id=5%3A2
 
 Snippets of our product
 
-![Easy](https://user-images.githubusercontent.com/108425957/192337470-2ceaf795-5ba7-45c5-baa7-06a22a395172.png)
 ![Title Page](https://user-images.githubusercontent.com/108425957/192337472-4bd6f41d-3168-4769-a57b-ebd611ad0a3c.png)
+![Easy](https://user-images.githubusercontent.com/108425957/192337470-2ceaf795-5ba7-45c5-baa7-06a22a395172.png)
 ![Customize Character (alternative 3)](https://user-images.githubusercontent.com/108425957/192337477-084f24a6-04ef-42d4-a5e8-fa2c419276f2.png)
 
 
