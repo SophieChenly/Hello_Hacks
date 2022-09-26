@@ -3,10 +3,10 @@
 This is a functional prototpye of our EdTech solution for the hackathon HelloHacks hosted by UBC Biztech. 
 
 Members:
-Sophie Chen - @SophieChenly
-Ray Ho - @Raywnh
-Calvin Cavanagh - @calcav28
-Donna Li - @Dlii_01
+- Sophie Chen - @SophieChenly
+- Ray Ho - @Raywnh
+- Calvin Cavanagh - @calcav28
+- Donna Li - @Dlii_01
 
 FRONTEND:
 
