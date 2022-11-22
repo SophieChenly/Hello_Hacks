@@ -22,7 +22,7 @@ Snippets of our product
 
 
 BACKEND CODE:
-
+- Developed with basic JSON data manipulation and CRUD
 Please test this using the live server extension in VScode.
 
 MUST READ:
