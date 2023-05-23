@@ -1,6 +1,6 @@
 # Super Math Pros - 1st Place Winner @ UBC Biztech HelloHacks
 
-This is a functional prototpye of our EdTech solution for the hackathon HelloHacks hosted by UBC Biztech. 
+This is a functional prototype of our EdTech solution for the hackathon HelloHacks hosted by UBC Biztech. 
 
 Members:
 - Sophie Chen - @SophieChenly
